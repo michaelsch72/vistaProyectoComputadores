@@ -78,15 +78,11 @@
                 <div class="form-group">
             <button id="butonMostrar" onclick="mostrarComputadores()" class="btn btn-primary btn-block form-control mt-2">MOSTRAR</button>
                 </div>
-           
-            <table border="1" id="listaComputadores"  >
-                <h1> Computadores</h1>
-            
-            </table>
-
-            <table border="1" class="table table-stryped table-hover">
+           <h1> Computadores</h1>
+            <table border="1" id="listaComputadores" class="table table-stryped" >
                 <thead  class="thead-dark">
                     <tr>
+                        <th>Id</th>
                         <th>Nombre</th>
                         <th>brand</th>
                         <th>year</th>
@@ -95,19 +91,8 @@
                         <th>Eliminar</th>
 
                     </tr>
-                </thead>
-                <tr th:each="client : ${client}">
-                    <td id="nombre">Mostrar Nombre</td>
-                    <td id="brand">Mostrar Apellido</td>
-                    <td id="year">Mostrar Email</td> 
-                    <td id="description" >Mostrar Email</td> 
-                    <td><a href="@{/editarclient/}+ ${client.idcliente}"  th:text="Editar"></a></td>
-                    <td><a href="@{/eliminarClient/}+ ${client.idcliente}"  th:text="Eliminar"></a></td>
-
-
-                </tr>
+            
             </table>
-        
         </div>
 
     <footer th:fragment="footer" class="bg-primary text-white mt-5 p-5">

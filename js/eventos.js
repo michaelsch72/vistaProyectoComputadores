@@ -14,7 +14,7 @@ console.log("desde jquery");
 			datoscomputadores += "<td>"+computadores[i].year+"</td>";
 			datoscomputadores += "<td>"+computadores[i].description+"</td>";
 			datoscomputadores += "<td><a href = '#' onclick = 'editar("+computadores[i].id+");' data-bs-toggle='modal' data-bs-target='#modalEditar' class = 'btn btn-warning'>Editar</a></td>";
-			datoscomputadores += "<td><a href = '#' onclick = 'eliminar("+computadores[i].id+");' class = 'btn btn-danger'>Eliminar</a></td>";
+			datoscomputadores += "<td><a href = '#' onclick = 'eliminar("+computadores[i].id+");' class = 'btn btn-warning'>Eliminar</a></td>";
 			datoscomputadores += "</tr>";
 
 			$("#listaComputadores").append(datoscomputadores);
@@ -26,38 +26,8 @@ console.log("desde jquery");
 	});
 
 }
-/** 
-
-$.ajax({    
-	url : 'http://localhost:8080/api/Computer/all',
-	type : 'GET',
-	dataType : 'json',
-	success:function(computadores){
-	let datoscomputadores ="";
-	let id;
-	let nombre =$("#nombre");
-	let brand=$("#brand");
-	let year=$("#year");
-	let description=$("#description");
-	
-
-	for (i=0; i<computadores.length; i++){
-		id = +computadores[i].id;
-		nombre =computadores[i].name;
-		brand = computadores[i].brand;
-		year =computadores[i].year;
-		description =computadores[i].description;
 
 
-		$("#listaComputadores").append(datoscomputadores);
-	}
-
-	
-}
-
-});
-
-**/
 
 
 
